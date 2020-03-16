@@ -12,7 +12,8 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text.command
     when '/start'
       text = 'Greeting, hooman!'
-      bot.respond_to_user(message, text)
+      bot.api.send_message(chat_id: message.chat.id, text: text)
+      # bot.send_message(message, text) # <= change to this when you'll fil your Bot ID in useful_ids.rb
 
     when '/get_id'
       Tools::get_id(bot, message)
