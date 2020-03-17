@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 module Tools
-  extend self
-
   def must_be_reply(bot, message)
     if message.reply_to_message
       yield

@@ -5,7 +5,7 @@ module Tools
   OWNER_ID = 786_714_018
   PRIVILEGED_IDS = [].freeze
 
-  def self.get_id(bot, message)
+  def get_id(bot, message)
     text = '$$$$$'
     bot.api.send_message(chat_id: message.chat.id, text: text)
     bot.listen do |response|
