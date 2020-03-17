@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Telegram
   module Bot
     class Client
@@ -32,6 +34,10 @@ module Telegram
 
       def self_can_delete_messages?(message)
         user_can_delete_messages?(message, Tools::BOT_ID)
+      end
+
+      def self_can_mute?(message)
+        user_can_mute?(message, Tools::BOT_ID)
       end
 
       def user_muted?(message, id)

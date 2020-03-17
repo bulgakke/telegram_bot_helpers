@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module Tools
-  extend self 
+  extend self
 
   def form_target_link(message, full_name = false)
     return nil unless message.reply_to_message

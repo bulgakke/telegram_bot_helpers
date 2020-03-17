@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Telegram
   module Bot
     module Types
@@ -11,7 +13,7 @@ module Telegram
               @cut_at = index
             end
           end
-      
+
           text.chars.slice(0..@cut_at).join
         end
       end
