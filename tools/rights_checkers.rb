@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Telegram
   module Bot
     class Client
@@ -53,9 +51,9 @@ module Telegram
 
       def user_in_chat?(message, id)
         chat_member = get_member_info(message, id)
+        return false unless chat_member
         return false if chat_member['status'] == 'left'
         return false if chat_member['status'] == 'kicked'
-        return false unless chat_member
 
         true
       end

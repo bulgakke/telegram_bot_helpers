@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Tools
   def must_be_reply(bot, message)
     if message.reply_to_message
@@ -15,6 +13,15 @@ module Tools
       yield
     else
       text = "You're not my owner, sorry"
+      bot.respond_to_user(message, text)
+    end
+  end
+
+  def must_be_privileged(bot, message)
+    if message.from_privileged?
+      yield
+    else
+      text = "Only privileged users can do this"
       bot.respond_to_user(message, text)
     end
   end

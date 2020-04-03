@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Telegram
   module Bot
     class Client
@@ -19,7 +17,7 @@ module Telegram
         api.send_message(chat_id: message.chat.id, reply_to_message_id: message.reply_to_message.message_id, text: text, parse_mode: 'HTML')
       end
 
-      def send_message(message, text, no_preview = false)
+      def send_message(message, text, no_preview: false)
         return nil unless self_can_send_text?(message)
 
         if no_preview

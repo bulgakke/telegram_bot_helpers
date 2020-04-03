@@ -1,11 +1,13 @@
-# frozen_string_literal: true
-
 module Telegram
   module Bot
     module Types
       class Message
         def from_owner?
           from.id == Tools::OWNER_ID
+        end
+
+        def from_privileged?
+          from_owner? || Tools::PRIVILEGED_IDS.include?(from.id)
         end
 
         def from_self?
