@@ -118,6 +118,6 @@ Call these on the `Tools` module. Usually these encapsulate often used routine s
   - `::form_user_link(message, full_name: false)`
   - `::form_target_link(message, full_name: false)`
 
-  Returns a string, which, when sent in a message, becomes a hyperlink to the profile with the Telegram first name (full name if `full_name: true`). 
-  User if the sender of the `message`, target is the sender of the message the current `message` replies to.
+  Returns an HTML-escaped string, which, when sent in a message, becomes a hyperlink to the profile with the Telegram first name (full name if `full_name: true`). 
+  User is the sender of the `message`, target is the sender of the message the current `message` replies to.
 
