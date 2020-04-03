@@ -1,4 +1,5 @@
 Telegram Bot API official documentation: https://core.telegram.org/bots
+
 The wrapper used here: https://github.com/atipugin/telegram-bot-ruby
 
 This guide is mostly about the stuff you'll type in the editor building the logic of your bot. If you want to learn about Telegram, how its group chats work, how to edit the bot account or how to deploy it, use other sources.
