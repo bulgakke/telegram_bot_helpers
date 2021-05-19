@@ -21,7 +21,7 @@ module Tools
     if message.from_privileged?
       yield
     else
-      text = "Only privileged users can do this"
+      text = 'Only privileged users can do this'
       bot.reply(message, text)
     end
   end

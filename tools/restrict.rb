@@ -3,7 +3,8 @@ module Telegram
     class Client
       def mute(message, user_to_mute_id, seconds)
         if self_can_mute?(message)
-          api.restrict_chat_member(chat_id: message.chat.id, user_id: user_to_mute_id, can_send_messages: false, until_date: Time.now.to_i + seconds)
+          api.restrict_chat_member(chat_id: message.chat.id, user_id: user_to_mute_id, can_send_messages: false,
+                                   until_date: Time.now.to_i + seconds)
           true
         else
           @text = "I don't have the rights to mute!"

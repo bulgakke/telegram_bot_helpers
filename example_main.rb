@@ -3,7 +3,8 @@ require 'telegram/bot'
 require_rel 'tools'
 require_relative 'useful_ids'
 
-token = '1043894792:AAFutoMpUfFPgTrL1vej2VgKaiMuMYHMHQ4' # you can declare it in another file or as an environment variable
+# you can declare it in another file or as an environment variable
+token = '1111111111:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
 
 puts 'Successfully started the program in regular mode'
 
@@ -43,7 +44,7 @@ Telegram::Bot::Client.run(token) do |bot|
           begin
             string = eval(message.reply_to_message.text)
             text = string.to_s
-          rescue => e
+          rescue StandardError => e
             text = e
           end
           bot.respond_to_target(message, text)
@@ -57,9 +58,7 @@ end
 # It's convenient to hold it here (@BotFather accepts them in this format):
 
 =begin
-
 start - Says hello
 poke - Pokes the person you reply to with it
 mute - Mutes a user if the bot has rights to do it
-
 =end

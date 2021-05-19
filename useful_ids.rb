@@ -8,7 +8,7 @@ module Tools
     unless message.reply_to_message
       text = 'Use this command as a reply to my message'
       bot.api.send_message(chat_id: message.chat.id, text: text)
-      return 
+      return
     end
 
     text = "BOT_ID = #{message.reply_to_message.from.id} \nOWNER_ID = #{message.from.id}"
