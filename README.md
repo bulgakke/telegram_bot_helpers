@@ -50,10 +50,10 @@ Call these on the `message` object inside of the `bot.listen do |message|` block
   - `#complain_to_owner(text)`
 
   Sends a private message to the bot owner account.
-  - `#respond_to_user(message, text)`
+  - `#reply(message, text)`
 
   Replies to the sender of the current `message` in the current chat.
-  - `#respond_to_target(message, text)`
+  - `#reply_to_target(message, text)`
 
   Replies to the sender of the message current `message` replies to in the current chat.
   - `#send_message(message, text, no_preview: false)`
