@@ -6,14 +6,14 @@ module Tools
 
   def get_id(bot, message)
     unless message.reply_to_message
-      @text = 'Use this command as a reply to my message'
-      bot.api.send_message(chat_id: message.chat.id, text: @text)
+      text = 'Use this command as a reply to my message'
+      bot.api.send_message(chat_id: message.chat.id, text: text)
       return 
     end
 
-    @text = "BOT_ID = #{message.reply_to_message.from.id} \nOWNER_ID = #{message.from.id}"
-    bot.api.send_message(chat_id: message.chat.id, text: @text)
-    @text = 'Add these into your project in `useful_ids.rb`'
-    bot.api.send_message(chat_id: message.chat.id, text: @text)
+    text = "BOT_ID = #{message.reply_to_message.from.id} \nOWNER_ID = #{message.from.id}"
+    bot.api.send_message(chat_id: message.chat.id, text: text)
+    text = 'Add these into your project in `useful_ids.rb`'
+    bot.api.send_message(chat_id: message.chat.id, text: text)
   end
 end
