@@ -4,7 +4,7 @@ module Tools
       yield
     else
       text = "Use this as a reply to someone's message"
-      bot.respond_to_user(message, text)
+      bot.reply(message, text)
     end
   end
 
@@ -13,7 +13,7 @@ module Tools
       yield
     else
       text = "You're not my owner, sorry"
-      bot.respond_to_user(message, text)
+      bot.reply(message, text)
     end
   end
 
@@ -22,7 +22,7 @@ module Tools
       yield
     else
       text = "Only privileged users can do this"
-      bot.respond_to_user(message, text)
+      bot.reply(message, text)
     end
   end
 end
